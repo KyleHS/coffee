@@ -5,11 +5,12 @@
 .grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: minmax(max-content, 300px) 1fr 1fr 1fr 1fr;
+	grid-template-rows: minmax(max-content, 300px) 1fr 1fr 1fr 1fr 1fr;
 	grid-template-areas: 
 	"nav nav"
 	"header header"
-	"content about"
+	"content content"
+	"about about"
 	"footer footer";
 	width: 100%;
 	height: 300px;
@@ -17,28 +18,38 @@
 
 .nav {
 	grid-area: nav;
-	background-color: #f4a460;
+	background-color: #b35900;
 	color: white;
 	font-family: 'Gaegu', cursive;
-	padding: 0 2rem 0 2rem;
+	padding: .5rem 2rem .5rem 2rem;
+	border-bottom: 2px solid #ffbf80;
 }
 
-.container {
+.navcontainer {
 	display: inline-flex;
 	font-size: 2rem;
 	width: 100%;
 }
 
-.container .links {
+.navcontainer .links {
 	text-align: right;
 	width: 100%;
 	margin-right: 2rem;
 }
 
 .links a {
-	color: black;
+	color: #ffcc99;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px black;
 	text-decoration: none;
 	margin-right: 2rem;
+	padding: 0 1rem;
+}
+
+a:hover {
+	background-color: #ffbf80;
+	color: white;
+	padding: 3rem 1rem;
 }
 
 .title {
@@ -47,20 +58,44 @@
 
 span.title {
 	font-weight: bold;
+	text-shadow: 1px 1px 4px black;
 }
 
 .header {
 	grid-area: header;
-	display: flex;
+	overflow: hidden;
 	height: 40rem;
-
 }
 
-.header img {
-	width: 100%;
+
+.headcontainer {
+	display: flex;
+	align-self: center;
 	height: 100%;
-	background-repeat: no-repeat;
+	background-image: url("../images/coffeehead.jpg");
+	background-size: cover;
+	filter: brightness(100%) contrast(150%);
 }
+
+.headtext {
+	margin: auto;
+	text-align: center;
+	font-family: 'Marck Script', cursive;
+}
+
+.headtext h1 {
+	font-size: 4rem;
+    color:  #ffb366;
+    text-shadow: 2px 2px 8px black;
+}
+
+
+.headtext p {
+	font-size: 3rem;
+	color: #ffcc99;
+    text-shadow: 1px 1px 4px black;
+}
+
 
 .content {
 	grid-area: content;
