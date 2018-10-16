@@ -64,9 +64,9 @@ span.title {
 .header {
 	grid-area: header;
 	overflow: hidden;
-	height: 40rem;
+	height: 45rem;
+	border-bottom: 2px solid #ffcc99;
 }
-
 
 .headcontainer {
 	display: flex;
@@ -99,15 +99,167 @@ span.title {
 
 .content {
 	grid-area: content;
-	background-color: blue;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: 
+	"menu menu menu menu"
+	"cappuccino mocha latte espresso";
+	height: 30rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	background-color: #fff2e6;
+}
+
+.content h2{
+    text-align: center;
+}
+
+.content img {
+	width: 100%;
+	min-height: 100%;
+	border-top: 2px solid #ffcc99;
+}
+
+.menu {
+	grid-area: menu;
+	font-family: 'Marck Script', cursive;
+	font-size: 2.8rem;
+	padding-bottom: 2rem;
+	color: #ffb366;
+	text-shadow: 2px 2px 8px black;
+}
+
+.cappuccino {
+	grid-area: cappuccino;
+	height: 100%;
+	margin: 0 .5rem;
+	border: 2px solid #ffcc99;
+	border-radius: 25px;
+	overflow: hidden;
+	background-color: #b35900;
+}
+
+.cappuccino h2 {
+	font-size: 2.5rem;
+	color: #ffcc99;
+    text-shadow: 1px 1px 4px black;
+	padding: .5rem;
+}
+
+.cappuccino:hover {
+	filter: brightness(115%);
+}
+
+.mocha {
+	grid-area: mocha;
+	height: 100%;
+	margin: 0 .5rem;
+	border: 2px solid #ffcc99;
+	border-radius: 25px;
+	overflow: hidden;
+	background-color: #b35900;
+}
+
+.mocha h2 {
+	font-size: 2.5rem;
+	color: #ffcc99;
+    text-shadow: 1px 1px 4px black;
+	padding: .5rem;
+}
+
+.mocha:hover {
+	filter: brightness(115%);
+}
+
+.latte {
+	grid-area: latte;
+	height: 100%;
+	margin: 0 .5rem;
+	border: 2px solid #ffcc99;
+	border-radius: 25px;
+	overflow: hidden;
+	background-color: #b35900;
+}
+
+.latte h2 {
+	font-size: 2.5rem;
+	color: #ffcc99;
+    text-shadow: 1px 1px 4px black;
+	padding: .5rem;
+}
+
+.latte:hover {
+	filter: brightness(115%);
+}
+
+.espresso {
+	grid-area: espresso;
+	height: 100%;
+	margin: 0 .5rem;
+	border: 2px solid #ffcc99;
+	border-radius: 25px;
+	overflow: hidden;
+	background-color: #b35900;
+}
+
+.espresso h2 {
+	font-size: 2.5rem;
+	color: #ffcc99;
+    text-shadow: 1px 1px 4px black;
+	padding: .5rem;
+}
+
+.espresso:hover {
+	filter: brightness(115%);
 }
 
 .about {
 	grid-area: about;
-	background-color: green;
+	background-color: #fff2e6;
+	font-size: 1.5rem;
+	padding-top: 2rem;
+}
+
+.about h1 {
+	font-family: 'Marck Script', cursive;
+	text-align: center;
+	color: #ffb366;
+	text-shadow: 2px 2px 8px black;
+	padding-bottom: 1rem;
+}
+
+.about video {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #ffcc99;
+    border-radius: 25px;
+}
+
+.about p {
+	font-family: 'Gaegu', cursive;
+	width: 50%;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
 }
 
 .footer {
 	grid-area: footer;
 	background-color: yellow;
+	display: inline-flex;
+	font-size: 2rem;
+	border-top: 2px solid #ffbf80;
+	background-color: #b35900;
+	color: white;
+	font-family: 'Gaegu', cursive;
+	padding: .5rem 2rem .5rem 2rem;
+}
+
+.footer copyright {
+    display: inline-flex;
+	text-align: right;
+	width: 100%;
 }
